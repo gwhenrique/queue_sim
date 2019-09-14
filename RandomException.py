@@ -1,0 +1,2 @@
+class OutOfRandomsError(Exception):
+    pass

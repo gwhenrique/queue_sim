@@ -1,0 +1,34 @@
+{
+  "queues": [
+    {
+      "servers": 1,
+      "capacity": 10,
+      "min_arrival": 5.0,
+      "max_arrival": 7.0,
+      "min_service": 2.0,
+      "max_service": 8.0,
+      "name": "q1",
+      "connections": [{"name": "q2", "probability": 0.65}]
+    },
+
+    {
+      "capacity": 5,
+      "servers": 2,
+      "min_service": 10.0,
+      "max_service": 20.0,
+      "name": "q3"
+    },
+    {
+      "capacity": 2,
+      "servers": 1,
+      "min_arrival": 1.0,
+      "max_arrival": 3.0,
+      "min_service": 4.0,
+      "max_service": 6.0,
+      "name": "q2",
+      "connections": [{"name": "q1", "probability": 0.3}, {"name": "q3", "probability": 0.45}, {"name": "q2", "probability": 0.1}]
+    }],
+    "arrivals": [{"name": "q1", "time": 2.0}],
+  "n_randoms": 100000,
+  "seeds": [1,2,3,4,5]
+}

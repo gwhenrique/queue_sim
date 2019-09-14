@@ -1,0 +1,25 @@
+{
+  "queues": [
+    {
+      "capacity": 2,
+      "servers": 1,
+      "min_arrival": 1.0,
+      "max_arrival": 3.0,
+      "min_service": 4.0,
+      "max_service": 6.0,
+      "name": "q1",
+      "connections": [{"name": "q2", "probability": 1.0}]
+    },
+    {
+      "capacity": 2,
+      "servers": 1,
+      "min_arrival": 1.0,
+      "max_arrival": 3.0,
+      "min_service": 4.0,
+      "max_service": 6.0,
+      "name": "q2"
+    }],
+    "arrivals": [{"name": "q1", "time": 2.0}],
+  "n_randoms": 100000,
+  "seeds": [1,2,3,4,5]
+}
